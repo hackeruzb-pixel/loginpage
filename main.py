@@ -20,7 +20,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # 🌐 CORS sozlamalari (frontend bilan bog'lanish uchun)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173/"],  # frontend manzili
+    allow_origins=["http://localhost:5173"],  # ⛔️ '/' bo'lmasligi kerak
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
